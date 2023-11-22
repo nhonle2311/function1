@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Constellations</title>
+    <!-- Bạn có thể thêm các thẻ <style> để tùy chỉnh giao diện -->
+</head>
+<body>
+     <script>
+        // Tạo mảng với tên ngôi sao
+        let starNames = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+
+        // Tạo mảng với tên chòm sao tương ứng
+        let constellationNames = ["Ursa Minor", "Taurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+
+        // Hàm tìm chòm sao tương ứng với ngôi sao
+        function findConstellation(starName) {
+            for (let i = 0; i < starNames.length; i++) {
+                if (starNames[i] === starName) {
+                    return constellationNames[i];
+                }
+            }
+            // Trả về null nếu không tìm thấy
+            return null;
+        }
+
+        // Sử dụng prompt để nhận tên ngôi sao từ người dùng
+        let userInput = prompt("Nhập tên của ngôi sao:");
+
+        // Gọi hàm và hiển thị kết quả
+        let result = findConstellation(userInput);
+        if (result !== null) {
+            alert(`${userInput} thuộc chòm sao ${result}.`);
+        } else {
+            alert(`Không tìm thấy thông tin cho ngôi sao có tên ${userInput}.`);
+        }
+    </script>
+
+    <!-- Bạn có thể thêm các phần HTML khác trong phần body nếu cần -->
+</body>
+</html>
+
+</body>
+</html>
